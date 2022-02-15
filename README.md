@@ -12,7 +12,7 @@ discord.js
 node-fetch
 canvacord
 discord-canvas
-
+mathjs
 ```
 # Installation
 
@@ -71,7 +71,7 @@ kartof.welcome({
 
 
  ## meme
-and a meme command for some reason 
+meme command for some reason 
   ```js
 kartof.meme({ 
       message: message,
@@ -79,3 +79,11 @@ kartof.meme({
       
    });
 ```
+ ## Calculator With Buttons
+
+  ```js
+kartof.calculator({
+        message: message
+    });
+```
+<img src="https://media.discordapp.net/attachments/710152357966774385/943226601527713842/unknown.png">
