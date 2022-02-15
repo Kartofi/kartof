@@ -1,0 +1,24 @@
+{
+  "name": "kartof",
+  "version": "1.0.8",
+  "description": "Package for multyguild welcome and goodbye and memes ( discord.js v13 now",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kartofi/kartof.git"
+  },
+  "author": "kakarotofi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kartofi/kartof/issues"
+  },
+  "homepage": "https://github.com/Kartofi/kartof#readme",
+  "dependencies": {
+    "canvas": "^2.8.0",
+    "discord-canvas": "^1.4.1",
+    "discord.js": "^13.0.1"
+  }
+}
