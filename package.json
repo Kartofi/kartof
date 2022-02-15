@@ -1,6 +1,6 @@
 {
   "name": "kartof",
-  "version": "1.0.8",
+  "version": "1.2.0",
   "description": "Package for multyguild welcome and goodbye and memes ( discord.js v13 now",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,7 @@
   "dependencies": {
     "canvas": "^2.8.0",
     "discord-canvas": "^1.4.1",
-    "discord.js": "^13.0.1"
+    "discord.js": "^13.0.1",
+    "mathjs": "^10.1.1"
   }
 }
