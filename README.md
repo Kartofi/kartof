@@ -4,7 +4,7 @@ Hello, this is my first package.
 
 <a href="https://www.npmjs.com/package/kartof">Kartof npm package</a>
 
-# Required
+# Packages Used
 ```powershell
 
 mongoose
@@ -53,7 +53,7 @@ kartof.goodbye({
       username: some username,
 	  discriminator: discriminator of that user,
 	  avatarimg: avatar img url,
-	  memberCount: memebr count
+	  memberCount: memeber count
 });
   ```
  ## Send welcome message
@@ -65,7 +65,7 @@ kartof.welcome({
       username: some username,
 	  discriminator: discriminator of that user,
 	  avatarimg: avatar img url,
-	  memberCount: memebr count
+	  memberCount: memeber count
 });
 ```
 
@@ -84,8 +84,8 @@ kartof.meme({
   ```js
 kartof.calculator({
         message: message,
-         expire_time: 100, -- In Seconds
-         channelID
+         expire_time: Time in seconds,
+         channelID: channel to be send
     });
 ```
 <img src="https://media.discordapp.net/attachments/710152357966774385/943226601527713842/unknown.png">
