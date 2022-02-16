@@ -1,5 +1,22 @@
-Hello, this is my first package.
+[![discordBadge](https://img.shields.io/badge/Chat-Click%20here-7289d9?style=for-the-badge&logo=discord)](https://discord.gg/BxZJHQREsA)
+[![downloadsBadge](https://img.shields.io/npm/dt/nuggies?style=for-the-badge)](https://npmjs.com/kartof)
+[![versionBadge](https://img.shields.io/npm/v/nuggies?style=for-the-badge)](https://npmjs.com/kartof)
 
+
+
+<div align="left">
+  <p>
+    <a href="https://nodei.co/npm/kartof
+/"><img src="https://nodei.co/npm/kartof.png?downloads=true&stars=true" alt="NPM Info" /></a>
+  </p>
+</div>
+
+An Utility Package For Discord Bots!
+
+# 📂・Installation
+```powershell
+npm i kartof
+```
 	
 
 <a href="https://www.npmjs.com/package/kartof">Kartof npm package</a>
