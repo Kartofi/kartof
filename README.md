@@ -83,7 +83,9 @@ kartof.meme({
 
   ```js
 kartof.calculator({
-        message: message --dd
+        message: message,
+         expire_time: 100, -- In Seconds
+         channelID
     });
 ```
 <img src="https://media.discordapp.net/attachments/710152357966774385/943226601527713842/unknown.png">
