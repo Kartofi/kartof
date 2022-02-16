@@ -19,7 +19,6 @@ npm i kartof
 ```
 	
 
-<a href="https://www.npmjs.com/package/kartof">Kartof npm package</a>
 
 # Packages Used
 ```powershell
@@ -42,6 +41,12 @@ yarn:
 ```powershell
 yarn add kartof
  ```
+# 💡・Features
+- Welcome/GoodBye - multyguild!
+- Memes!
+- Calculator With buttons!
+- Random images!
+
 
 ## connect to database
 
