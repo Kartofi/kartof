@@ -21,6 +21,7 @@ class main {
  * @param {Message} message - The Discord Message
 * @param {String} channelID - the id of the channel you want to send the message to.
 * @param {MessageEmbed} embed - The Discord Embed
+* @param {Int} expire_time - The Discord Embed
 
  */
     static async connect(url) {
@@ -134,7 +135,9 @@ static async goodbye_welcome_set({ message , guildID, channelID }) {
     
 }
 
-static async calculator({message}){
+static async calculator({message, expire_time, channelID}){
+  if(!message) throw new TypeError('Please provide the Discord Message');
+  if(!expire_time) throw new TypeError('Please provide the Expire Time');
   let maths = "0"
     const embed = new MessageEmbed()
 		.setTitle("Calculator")
@@ -231,20 +234,21 @@ static async calculator({message}){
     const row3 = new MessageActionRow().addComponents(seven,eight, nine, multy);
     const row4 = new MessageActionRow().addComponents(minus,zero,calcu, divide);
     const row5 = new MessageActionRow().addComponents(point);
+  
 	  const meme_em = new MessageEmbed()
 	.setColor('RANDOM')
 	.setTitle(maths)
-  .setDescription("You Have 1 minute!")
+  .setDescription(`You Have ` + expire_time + `seconds!`)
 	const end_em = new MessageEmbed()
   .setColor('RANDOM')
 	.setTitle("Ended! Use the Command Again to use it!")
 
   
 
-    message.channel.send({ embeds: [meme_em], components: [row, row2, row3, row4, row5]}).then((msg) =>{
+  message.guild.channels.cache.get(channelID).send({ embeds: [meme_em], components: [row, row2, row3, row4, row5]}).then((msg) =>{
      
 
-      const collector = msg.createMessageComponentCollector({ filter: null, time: 60000 });
+      const collector = msg.createMessageComponentCollector({ filter: null, time: expire_time * 1000 });
       
       collector.on('collect', async i => {
         i.deferUpdate()
