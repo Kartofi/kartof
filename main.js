@@ -54,7 +54,26 @@ class main {
 
     message.client.channels.cache.get(channelID).send({ embeds: [meme_em]});
 }
-   
+static async random_image({ message , channelID }) {
+  console.log(Client.username)
+ 
+ 
+ 
+   const meme_em = new MessageEmbed()
+ .setColor('RANDOM')
+ .setTitle("Here Is your random image")
+ 
+ 
+
+ 
+ .setImage("https://api.kartof.repl.co/random-img")
+ 
+
+
+   message.client.channels.cache.get(channelID).send({ embeds: [meme_em]});
+}
+  
+
 
  static async welcome({ message , guildID, username, discriminator, avatarimg, memberCount }) {
     
