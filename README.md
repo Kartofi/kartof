@@ -48,24 +48,24 @@ kartof.goodbye_welcome_set({
 
   ```js
 kartof.goodbye({ 
-      message: message,
-      guildID: your guild id,
-      username: some username,
-	  discriminator: discriminator of that user,
-	  avatarimg: avatar img url,
-	  memberCount: memeber count
+     message: message,
+      guildID: member.guild.id,
+      username: member.username,
+	  discriminator: member.discriminator,
+	  avatarimg: member.avatarURL,
+	  memberCount: member.guild.memberCount
 });
   ```
  ## Send welcome message
 
 ```js
 kartof.welcome({ 
-      message: channel id,
-      guildID: your guild id,
-      username: some username,
-	  discriminator: discriminator of that user,
-	  avatarimg: avatar img url,
-	  memberCount: memeber count
+      message: message,
+      guildID: member.guild.id,
+      username: member.username,
+	  discriminator: member.discriminator,
+	  avatarimg: member.avatarURL,
+	  memberCount: member.guild.memberCount
 });
 ```
 
@@ -79,13 +79,23 @@ kartof.meme({
       
    });
 ```
+ ## random image
+meme command for some reason 
+  ```js
+kartof.random_image({ 
+      message: message,
+      channelID: message.channel.id
+      
+   });
+```
+
  ## Calculator With Buttons
 
   ```js
 kartof.calculator({
         message: message,
          expire_time: Time in seconds,
-         channelID: channel to be send
+         channelID: message.channel.id
     });
 ```
 <img src="https://media.discordapp.net/attachments/710152357966774385/943226601527713842/unknown.png">
