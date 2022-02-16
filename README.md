@@ -1,6 +1,6 @@
 [![discordBadge](https://img.shields.io/badge/Chat-Click%20here-7289d9?style=for-the-badge&logo=discord)](https://discord.gg/BxZJHQREsA)
 [![downloadsBadge](https://img.shields.io/npm/dt/kartof?style=for-the-badge)](https://npmjs.com/kartof)
-[![versionBadge](https://img.shields.io/npm/v/nuggies?style=for-the-badge)](https://npmjs.com/kartof)
+[![versionBadge](https://img.shields.io/npm/v/kartof?style=for-the-badge)](https://npmjs.com/kartof)
 
 
 
