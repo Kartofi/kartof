@@ -8,7 +8,7 @@ Hello, this is my first package.
 ```powershell
 
 mongoose
-discord.js
+discord.js version 13
 node-fetch
 canvacord
 discord-canvas
