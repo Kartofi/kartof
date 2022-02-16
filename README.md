@@ -83,7 +83,7 @@ kartof.meme({
 
   ```js
 kartof.calculator({
-        message: message
+        message: message --dd
     });
 ```
 <img src="https://media.discordapp.net/attachments/710152357966774385/943226601527713842/unknown.png">
