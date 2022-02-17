@@ -24,7 +24,7 @@ npm i kartof
 ```powershell
 
 mongoose
-discord.js version 13
+discord.js@13.6.0
 node-fetch
 canvacord
 discord-canvas
@@ -112,12 +112,14 @@ kartof.random_image({
 ```
 
  ## Calculator With Buttons
+Only the memeber with that userID can control the calculator
 
   ```js
 kartof.calculator({
         message: message,
          expire_time: Time in seconds,
-         channelID: message.channel.id
+         channelID: message.channel.id,
+         userID: message.member.id
     });
 ```
 <img src="https://media.discordapp.net/attachments/710152357966774385/943226601527713842/unknown.png">
