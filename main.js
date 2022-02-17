@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-mongoose.set('useFindAndModify', false);
 const welcomeMod = require('./models/welcome');
 const math = require('mathjs');
 const fetch = require('node-fetch');
@@ -22,6 +21,7 @@ class main {
 * @param {String} channelID - the id of the channel you want to send the message to.
 * @param {MessageEmbed} embed - The Discord Embed
 * @param {Int} expire_time - The Discord Embed
+* @param {Int} userID - The Id of the user who only can control the calculator
 
  */
     static async connect(url) {
@@ -154,9 +154,11 @@ static async goodbye_welcome_set({ message , guildID, channelID }) {
     
 }
 
-static async calculator({message, expire_time, channelID}){
+static async calculator({message, expire_time, channelID, userID}){
   if(!message) throw new TypeError('Please provide the Discord Message');
   if(!expire_time) throw new TypeError('Please provide the Expire Time');
+  if(!channelID) throw new TypeError('Please provide the channelID');
+  if(!userID) throw new TypeError('Please provide the user id');
   let maths = "0"
     const embed = new MessageEmbed()
 		.setTitle("Calculator")
@@ -271,6 +273,7 @@ static async calculator({message, expire_time, channelID}){
       
       collector.on('collect', async i => {
         i.deferUpdate()
+       if (i.user.id == userID) {
         if (i.customId == "multy") {
           if (maths != "0" && maths.charAt(maths.length-1) != "+" && maths.charAt(maths.length-1) != "*" && maths.charAt(maths.length-1) != "/" && maths.charAt(maths.length-1) != ",") {
           
@@ -513,6 +516,8 @@ static async calculator({message, expire_time, channelID}){
           }
          
         }
+       }
+       
       });
       
       collector.on('end', collected => msg.edit({ embeds: [end_em], components: [row, row2, row3, row4, row5]}));
