@@ -5,10 +5,11 @@ const kartof = require('kartof');
 client.on('message', async message => { 
    if (message.content == "calculator") {
      kartof.calculator({
-       message: message, 
-       expire_time:20 , 
-       channelID: message.channel.id
-     });
+        message: message,
+         expire_time: 20,
+         channelID: message.channel.id,
+         userID: message.member.id
+    });
    }
    
 });
